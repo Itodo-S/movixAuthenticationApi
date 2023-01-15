@@ -19,11 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 
 // Serve frontend
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  app.use(express.static(path.join(__dirname, '../itodo-movix-front-end-test/build')));
 
   app.get("*", (req, res) =>
     res.sendFile(
-      path.resolve(__dirname, "../", "frontend", "build", "index.html")
+      path.resolve(__dirname, "../", "itodo-movix-front-end-test", "build", "index.html")
     )
   );
 } else {
